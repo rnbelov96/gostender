@@ -1,0 +1,16 @@
+.header__content {
+  display: flex;
+  align-items: center;
+}
+
+.header__right-side {
+  height: 74px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 20px;
+  padding-left: 169px;
+  background: linear-gradient(90deg, rgba(2,0,36,0) 0%, rgba(0,107,119,1) 23%, rgba(0,144,103,1) 100%);
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
