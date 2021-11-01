@@ -1,7 +1,77 @@
 .desc {
   @include bg;
+  background-position: left top;
   background-image: url('/src/img/bgs/desc-bg.jpg');
   min-height: 791px;
   padding-top: 30px;
   padding-bottom: 140px;
+  position: relative;
+
+  @media (max-width: 991px) {
+    padding-bottom: 40px;
+  }
+
+  @media (max-width: 650px) {
+    padding-top: 0;
+    min-height: auto;
+    padding-bottom: 25px;
+  }
+}
+
+.desc__title {
+  font-size: 36px;
+  margin-top: 50px;
+  margin-bottom: 45px;
+  @include max-width(675px);
+  text-transform: uppercase;
+
+  @media (max-width: 650px) {
+    font-size: 20px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+}
+
+.desc__title-green {
+  color: #78c513;
+}
+
+.desc__text {
+  @include max-width(668px);
+  font-size: 26px;
+  margin-bottom: 20px;
+
+  @media (max-width: 650px) {
+    font-size: 14px;
+    margin-bottom: 17px;
+  }
+}
+
+.desc__list {
+  @include reset-list;
+  @include max-width(515px);
+
+  @media (max-width: 991px) {
+    margin-bottom: 30px;
+  }
+
+  @media (max-width: 650px) {
+    margin-bottom: 15px;
+  }
+}
+
+.desc__item {
+  margin-bottom: 25px;
+  font-size: 20px;
+  padding-left: 22px;
+  border-left: #006b77 5px solid;
+
+  @media (max-width: 650px) {
+    font-size: 14px;
+    margin-bottom: 13px;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }

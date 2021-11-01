@@ -32,3 +32,14 @@
   left: 50%;
   transform: translate3d(-50%, -50%, 0);
 }
+
+@mixin title {
+  font-size: 30px;
+  font-weight: bold;
+  text-transform: uppercase;
+
+  @media (max-width: 650px) {
+    font-size: 24px;
+    margin-bottom: 25px;
+  }
+}

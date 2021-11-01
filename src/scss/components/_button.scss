@@ -1,7 +1,7 @@
 .button {
   @include reset-btn;
-  font-size: 25px;
-  line-height: 32px;
+  font-size: 20px;
+  line-height: normal;
   text-align: center;
   display: flex;
   justify-content: center;
@@ -10,23 +10,45 @@
   padding-right: 7px;
   text-transform: uppercase;
   color: white;
-  font-weight: 900;
-  background: linear-gradient(180deg, #ffa665 0%, #fc4f19 100%);
-  box-shadow: 0px 6px 0px #cb3300;
-  border-radius: 8px;
+  font-weight: 700;
+  background-image: linear-gradient(6deg, #ff0000 0%, #ff006c 100%);
+  box-shadow: 0 5px 2px #980000;
+  border-radius: 15px;
   width: 100%;
-  min-height: 92px;
+  max-width: 300px;
+  min-height: 75px;
   overflow: hidden;
   position: relative;
 
+  @media (max-width: 650px) {
+    font-size: 16px;
+    min-height: 70px;
+  }
+
+  &_present {
+    display: none;
+
+    @media (max-width: 650px) {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  &_line-form {
+    max-width: 263px;
+    font-size: 18px;
+    display: block;
+  }
+
   &:hover {
-    background: #fc4f19;
+    background-image: linear-gradient(6deg, #da0048 0%, #ff8a00 100%);
   }
 
   &:active {
-    background: #cb3300;
-    box-shadow: none;
-    top: 6px;
+    background-image: linear-gradient(6deg, #ff9600 0%, #da0048 100%);
+    box-shadow: 0 2px 2px #980000;
+    top: 3px;
   }
 
   &::after {

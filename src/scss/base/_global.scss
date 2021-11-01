@@ -3,6 +3,7 @@ body {
   color: black;
   font-family: "DIN Round Pro", sans-serif;
   line-height: normal;
+  font-size: 20px;
 }
 
 main {
@@ -12,10 +13,10 @@ main {
 .container {
   position: relative;
   z-index: 1;
-  max-width: 1440px;
+  max-width: 1144px;
   margin: 0 auto;
 
-  @media (max-width: 1450px) {
+  @media (max-width: 1150px) {
     padding: 0 30px;
   }
 

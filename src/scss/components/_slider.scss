@@ -5,6 +5,7 @@
 .slider__wrapper {
   overflow: hidden;
   width: 100%;
+  position: relative;
 }
 
 .slider__img-box {
@@ -32,18 +33,6 @@
 
   @media (max-width: 991px) {
     justify-content: center;
-  }
-}
-
-.slider__nav-item {
-  @include reset-btn;
-  width: 11px;
-  height: 11px;
-  background: #d9d9d9;
-  border-radius: 50%;
-
-  &_active {
-    background: #ff3364;
   }
 }
 
