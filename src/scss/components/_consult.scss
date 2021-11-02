@@ -1,0 +1,102 @@
+.consult {
+  min-height: 607px;
+  @include bg;
+  background-position-x: left;
+  background-image: url('/src/img/bgs/consult-bg.jpg');
+  padding-top: 75px;
+  padding-bottom: 180px;
+
+  @media (max-width: 1300px) {
+    background-color: #00515a;
+    background-image: none;
+    min-height: auto;
+  }
+
+  @media (max-width: 991px) {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  @media (max-width: 767px) {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
+
+.consult__content {
+  @include max-width(713px);
+
+  @media (max-width: 1300px) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.consult__title {
+  @include title;
+  @include max-width(624px);
+  margin-bottom: 47px;
+  color: white;
+
+  @media (max-width: 767px) {
+    font-size: 28px;
+  }
+
+  @media (max-width: 650px) {
+    font-size: 24px;
+  }
+
+  span {
+    background-image: linear-gradient(to right, #006b77 0%, #009067 100%);
+    border-radius: 8px;
+    color: #b4ff00;
+    padding-left: 8px;
+    padding-right: 8px;
+    box-shadow: 0 0 25px #a3ff00;
+    animation: pulsate 1.5s ease-out infinite;
+  }
+}
+
+.consult__text {
+  color: white;
+  margin-bottom: 25px;
+
+  @media (max-width: 650px) {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+}
+
+.consult__note {
+  font-weight: bold;
+  color: #90d80d;
+  text-transform: uppercase;
+  margin-bottom: 0;
+
+  @media (max-width: 650px) {
+    font-size: 18px;
+  }
+}
+
+@keyframes pulsate {
+  0% {
+    box-shadow: 0 0 15px #a3ff00;
+  }
+  50% {
+    box-shadow: 0 0 25px #a3ff00;
+  }
+  100% {
+    box-shadow: 0 0 15px #a3ff00;
+  }
+}
+@-webkit-keyframes pulsate {
+  0% {
+    box-shadow: 0 0 15px #a3ff00;
+  }
+  50% {
+    box-shadow: 0 0 25px #a3ff00;
+  }
+  100% {
+    box-shadow: 0 0 15px #a3ff00;
+  }
+}
