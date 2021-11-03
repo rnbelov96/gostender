@@ -133,19 +133,19 @@
     top: 50%;
     left: 0px;
     transform: translateY(-50%);
-    width: 54px;
-    height: 55px;
+    width: 39px;
+    height: 40px;
     @include bg;
     background-image: url('/src/img/icons/phone.png');
 
     @media (max-width: 650px) {
-      left: 40px;
+      left: 46px;
     }
   }
 
   @media (max-width: 650px) {
-    padding-left: 0px;
-    align-items: flex-end;
+    padding-left: 58px;
+    align-items: center;
   }
 }
 
@@ -162,7 +162,7 @@
   @media (max-width: 650px) {
     height: auto;
     line-height: normal;
-    font-size: 24px;
+    font-size: 20px;
     margin-bottom: 5px;
   }
 
@@ -180,10 +180,6 @@
   text-transform: uppercase;
   font-size: 14px;
   text-align: center;
-
-  @media (max-width: 650px) {
-    // font-size: 12px;
-  }
 
   &:hover,
   &:active,

@@ -43,7 +43,7 @@
   }
 
   @media (max-width: 650px) {
-    font-size: 24px;
+    font-size: 21px;
   }
 
   span {
@@ -54,6 +54,27 @@
     padding-right: 8px;
     box-shadow: 0 0 25px #a3ff00;
     animation: pulsate 1.5s ease-out infinite;
+
+    @media (max-width: 650px) {
+      background-image: none;
+      padding-left: 0px;
+      padding-right: 0px;
+      box-shadow: none;
+      animation: none;
+    }
+  }
+
+  b {
+    font-weight: 700;
+    @media (max-width: 650px) {
+      background-image: linear-gradient(to right, #006b77 0%, #009067 100%);
+      border-radius: 8px;
+      color: #b4ff00;
+      padding-left: 8px;
+      padding-right: 8px;
+      box-shadow: 0 0 25px #a3ff00;
+      animation: pulsate 1.5s ease-out infinite;
+    }
   }
 }
 

@@ -166,6 +166,10 @@
   outline: none;
   width: 100%;
 
+  @media (max-width: 650px) {
+    font-size: 16px;
+  }
+
   &::-webkit-input-placeholder {
     color: #8c8c8c;
   }
