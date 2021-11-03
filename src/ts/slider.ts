@@ -432,7 +432,7 @@ const initSlider = (options: {
 };
 
 initSlider({
-  imagesLength: 3,
+  imagesLength: 4,
   isFlexible: false,
   maxMode: 1,
   sliderSectionName: 'slider-partner',
