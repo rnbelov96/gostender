@@ -25,6 +25,18 @@
     min-height: 70px;
   }
 
+  &_modal-form {
+    background-image: url('/src/img/bgs/modal-button-bg.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-width: 100%;
+    color: #2e1b00;
+    box-shadow: 0 5px 0 #725f38, 0 0 50px rgba(255, 247, 178, 0.35);
+    display: block;
+    margin-bottom: 8px;
+  }
+
   &_present {
     display: none;
 

@@ -25,11 +25,25 @@
   @include max-width(675px);
   text-transform: uppercase;
 
+  @media (max-width: 767px) {
+    font-size: 32px;
+  }
+
   @media (max-width: 650px) {
-    font-size: 20px;
+    font-size: 15px;
     margin-top: 15px;
     margin-bottom: 15px;
   }
+}
+
+.desc__title-pulse {
+  background-image: linear-gradient(to right, #006b77 0%, #009067 100%);
+  border-radius: 8px;
+  color: #b4ff00;
+  padding-left: 8px;
+  padding-right: 8px;
+  box-shadow: 0 0 25px #a3ff00;
+  animation: pulsation 1.5s ease-out infinite;
 }
 
 .desc__title-green {
@@ -42,7 +56,7 @@
   margin-bottom: 20px;
 
   @media (max-width: 650px) {
-    font-size: 14px;
+    font-size: 13px;
     margin-bottom: 17px;
   }
 }
@@ -67,11 +81,34 @@
   border-left: #006b77 5px solid;
 
   @media (max-width: 650px) {
-    font-size: 14px;
+    font-size: 13px;
     margin-bottom: 13px;
   }
 
   &:last-child {
     margin-bottom: 0;
+  }
+}
+
+@keyframes pulsation {
+  0% {
+    box-shadow: 0 0 5px #a3ff00;
+  }
+  50% {
+    box-shadow: 0 0 25px #a3ff00;
+  }
+  100% {
+    box-shadow: 0 0 5px #a3ff00;
+  }
+}
+@-webkit-keyframes pulsation {
+  0% {
+    box-shadow: 0 0 5px #a3ff00;
+  }
+  50% {
+    box-shadow: 0 0 25px #a3ff00;
+  }
+  100% {
+    box-shadow: 0 0 5px #a3ff00;
   }
 }

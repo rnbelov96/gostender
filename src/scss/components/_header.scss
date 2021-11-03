@@ -60,6 +60,23 @@
   flex-direction: column;
   align-items: center;
   padding-left: 74px;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0px;
+    transform: translateY(-50%);
+    width: 54px;
+    height: 55px;
+    @include bg;
+    background-image: url('/src/img/icons/phone.png');
+
+    @media (max-width: 650px) {
+      content: none;
+    }
+  }
 
   @media (max-width: 650px) {
     padding-left: 0px;
