@@ -47,11 +47,12 @@ let garantCurrentStep = 2;
 let trainCurrentStep = 2;
 
 const calcResult = () => {
-  result = Number(esc3Range.value) * 1000
-    + Number(esc6Range.value) * 1000
-    + Number(esc12Range.value) * 1000
-    + Number(garantRange.value) * 10000
-    + Number(trainRange.value) * 10000;
+  result = (Number(esc3Range.value) * 70000
+      + Number(esc6Range.value) * 120000
+      + Number(esc12Range.value) * 350000
+      + Number(garantRange.value) * 350000
+      + Number(trainRange.value) * 170000)
+    * 0.23;
   resultLabelEl.textContent = result.toLocaleString();
   return result;
 };
