@@ -6,6 +6,18 @@
   padding-top: 75px;
   padding-bottom: 180px;
 
+  @media (max-width: 1800px) {
+    background-position-x: -150px;
+  }
+
+  @media (max-width: 1700px) {
+    background-position-x: -205px;
+  }
+
+  @media (max-width: 1500px) {
+    background-position-x: -350px;
+  }
+
   @media (max-width: 1300px) {
     background-color: #00515a;
     background-image: none;

@@ -7,6 +7,18 @@
   padding-top: 185px;
   padding-bottom: 75px;
 
+  @media (max-width: 1800px) {
+    background-position-x: -150px;
+  }
+
+  @media (max-width: 1700px) {
+    background-position-x: -205px;
+  }
+
+  @media (max-width: 1500px) {
+    background-position-x: -329px;
+  }
+
   @media (max-width: 1300px) {
     background-color: #00515a;
     background-image: none;

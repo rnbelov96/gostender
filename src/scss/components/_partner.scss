@@ -7,6 +7,26 @@
   background-image: url('/src/img/bgs/partner-bg.jpg');
   color: white;
 
+  @media (max-width: 1800px) {
+    background-position-x: -150px;
+  }
+
+  @media (max-width: 1700px) {
+    background-position-x: -205px;
+  }
+
+  @media (max-width: 1500px) {
+    background-position-x: -290px;
+  }
+
+  @media (max-width: 1300px) {
+    background-position-x: -398px;
+  }
+
+  @media (max-width: 1200px) {
+    background-position-x: -448px;
+  }
+
   @media (max-width: 1150px) {
     background-image: none;
     background-color: #00515a;

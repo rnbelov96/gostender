@@ -7,6 +7,26 @@
   padding-bottom: 140px;
   position: relative;
 
+  @media (max-width: 1800px) {
+    background-position-x: -150px;
+  }
+
+  @media (max-width: 1700px) {
+    background-position-x: -205px;
+  }
+
+  @media (max-width: 1500px) {
+    background-position-x: -350px;
+  }
+
+  @media (max-width: 1300px) {
+    background-position-x: -445px;
+  }
+
+  @media (max-width: 1200px) {
+    background-position-x: -513px;
+  }
+
   @media (max-width: 991px) {
     padding-bottom: 40px;
   }

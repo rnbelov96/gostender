@@ -5,6 +5,19 @@
   background-image: url('/src/img/bgs/service-bg.jpg');
   background-position-x: right;
   padding-bottom: 70px;
+  background-position-x: -150px;
+
+  @media (max-width: 1800px) {
+    background-position-x: -200px;
+  }
+
+  @media (max-width: 1700px) {
+    background-position-x: -305px;
+  }
+
+  @media (max-width: 1500px) {
+    background-position-x: -366px;
+  }
 
   @media (max-width: 1350px) {
     background-image: none;
