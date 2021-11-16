@@ -5,7 +5,7 @@ const openedModalList: Element[] = [];
 
 const modalFormInfoList = [
   {
-    title: 'Оставьте заявку на бесплатную консультацию',
+    title: 'Получите бесплатную консультацию',
     button: 'Получить консультацию',
   },
   {
