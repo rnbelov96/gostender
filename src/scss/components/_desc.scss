@@ -75,7 +75,7 @@
   padding-left: 8px;
   padding-right: 8px;
   box-shadow: 0 0 25px #a3ff00;
-  animation: pulsation 1.5s ease-out infinite;
+  animation: pulsation 1s steps(1, start) infinite;
 
   @media (max-width: 650px) {
     background-image: none;
@@ -145,13 +145,13 @@
 
 @keyframes pulsation {
   0% {
-    box-shadow: 0 0 5px #a3ff00;
-  }
-  50% {
     box-shadow: 0 0 25px #a3ff00;
   }
+  50% {
+    box-shadow: 0 0 25px #a3ff00, 0 0 25px #00846c;
+  }
   100% {
-    box-shadow: 0 0 5px #a3ff00;
+    box-shadow: 0 0 25px #a3ff00;
   }
 }
 @-webkit-keyframes pulsation {
@@ -159,9 +159,9 @@
     box-shadow: 0 0 5px #a3ff00;
   }
   50% {
-    box-shadow: 0 0 25px #a3ff00;
+    box-shadow: 0 0 25px #a3ff00, 0 0 25px #00846c;
   }
   100% {
-    box-shadow: 0 0 5px #a3ff00;
+    box-shadow: 0 0 25px #a3ff00;
   }
 }
