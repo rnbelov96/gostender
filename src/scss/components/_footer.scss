@@ -187,6 +187,16 @@
     color: white;
     text-decoration: underline;
   }
+
+  &_thanks {
+    margin-bottom: 0;
+    &:hover,
+    &:active,
+    &:focus {
+      color: white;
+      text-decoration: none;
+    }
+  }
 }
 
 .footer__f5 {
