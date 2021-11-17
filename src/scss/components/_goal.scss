@@ -25,6 +25,10 @@
     min-height: auto;
   }
 
+  @media (max-height: 800px) {
+    padding-top: 50px;
+  }
+
   @media (max-width: 991px) {
     padding-top: 50px;
     padding-bottom: 50px;
@@ -97,7 +101,7 @@
   border-radius: 15px;
   background-color: #006b77;
   background-image: linear-gradient(to right, #006b77 0%, #009067 100%);
-  
+
   @media (max-width: 650px) {
     flex-direction: column;
   }
