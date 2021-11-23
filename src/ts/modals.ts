@@ -39,6 +39,11 @@ const openModal = (modalEl: HTMLDivElement) => {
 const modalElList = document.querySelectorAll('.modal');
 const [formModalEl, policyModalEl, youtubeAdvModalEl] = modalElList;
 
+const youtubeAdvModalWrapperEl = youtubeAdvModalEl.querySelector(
+  '.modal__center-wrapper',
+) as HTMLDivElement;
+let isYoutubeAdvModalOpened = false;
+
 const formTitleEl = formModalEl.querySelector('.js-modal-form-title') as HTMLSpanElement;
 const formBtnEl = formModalEl.querySelector('.js-modal-form-btn') as HTMLButtonElement;
 
@@ -104,4 +109,25 @@ fixBtnElList.forEach(btn => {
     formBtnEl.textContent = modalFormInfoList[2].button;
     openModal(formModalEl as HTMLDivElement);
   });
+});
+
+const youtubeAdvBtnCallEl = document.querySelector('.js-youtube-adv');
+youtubeAdvBtnCallEl?.addEventListener('click', () => {
+  if (!isYoutubeAdvModalOpened) {
+    isYoutubeAdvModalOpened = true;
+    youtubeAdvModalWrapperEl.innerHTML = `
+      <iframe
+        class="modal__video"
+        width="1520"
+        height="855"
+        src="https://www.youtube.com/embed/2OEL4P1Rz04"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
+    `;
+  }
+  openedModalList.unshift(youtubeAdvModalEl);
+  openModal(youtubeAdvModalEl as HTMLDivElement);
 });
