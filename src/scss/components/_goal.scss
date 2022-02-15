@@ -7,16 +7,12 @@
   padding-top: 185px;
   padding-bottom: 75px;
 
-  @media (max-width: 1800px) {
-    background-position-x: -150px;
-  }
-
   @media (max-width: 1700px) {
-    background-position-x: -205px;
+    background-position-x: -45px;
   }
 
   @media (max-width: 1500px) {
-    background-position-x: -329px;
+    background-position-x: -225px;
   }
 
   @media (max-width: 1300px) {
@@ -38,6 +34,10 @@
     padding-top: 30px;
     padding-bottom: 30px;
   }
+}
+
+.goal__bottom-content {
+  background-color: #00515a;
 }
 
 .goal__content {
@@ -96,9 +96,10 @@
 }
 
 .goal__note-box {
+  padding: 25px;
+  padding-bottom: 20px;
   margin-bottom: 27px;
-  display: flex;
-  border-radius: 15px;
+  border-radius: 10px;
   background-color: #006b77;
   background-image: linear-gradient(to right, #006b77 0%, #009067 100%);
 
@@ -107,21 +108,128 @@
   }
 }
 
+.goal__note-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+}
+
 .goal__note-text {
-  padding-top: 25px;
-  padding-bottom: 25px;
-  padding-left: 28px;
-  padding-right: 55px;
   font-size: 20px;
   font-weight: bold;
   margin-bottom: 0;
   color: white;
-  width: 57.3%;
+  flex-basis: 523px;
 
   @media (max-width: 650px) {
     width: 100%;
-    padding: 20px;
     font-size: 18px;
+  }
+}
+
+.goal__note-button {
+  @include reset-btn;
+  border: solid 2px #a2de05;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 20px;
+  padding-right: 55px;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  min-height: 59px;
+  border-radius: 200px;
+  text-transform: uppercase;
+  flex-shrink: 0;
+  position: relative;
+
+  &::after {
+    content: url('/src/img/arrow-down.png');
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 20px;
+    transition: transform 0.5s;
+  }
+
+  &_opened {
+    &::after {
+      transform: rotate(180deg) translateY(36%);
+    }
+  }
+
+  @media (max-width: 650px) {
+    font-size: 14px;
+    flex-shrink: 1;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: left;
+  }
+}
+
+.js-goal-note-list {
+  display: none;
+}
+
+.goal__note-list-wrapper {
+  margin-top: 25px;
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+
+  @media (max-width: 650px) {
+    flex-direction: column;
+    margin-top: 5px;
+    gap: 0px;
+  }
+
+  * > * {
+    margin-top: 20px;
+  }
+}
+
+.goal__note-list {
+  @include reset-list;
+  flex-basis: 50%;
+
+  &:first-child .goal__note-item {
+    @for $i from 1 through 6 {
+      &:nth-child(#{$i})::before {
+        content: '#{$i}.';
+      }
+    }
+  }
+
+  &:last-child .goal__note-item {
+    @for $i from 1 through 4 {
+      &:nth-child(#{$i})::before {
+        content: '#{$i + 6}.';
+      }
+    }
+  }
+}
+
+.goal__note-item {
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  position: relative;
+  padding-left: 36px;
+
+  @media (max-width: 650px) {
+    font-size: 16px;
+  }
+
+  &::before {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #a2de05;
   }
 }
 
@@ -152,6 +260,10 @@
   font-size: 20px;
   color: white;
   margin-bottom: 23px;
+  max-width: 645px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
 
   @media (max-width: 650px) {
     font-size: 18px;
@@ -160,27 +272,23 @@
 
 .goal__list {
   @include reset-list;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
 }
 
 .goal__item {
   display: flex;
-  gap: 37px;
-  margin-bottom: 24px;
-
-  &:last-child {
-    margin-bottom: 0;
-  }
-
-  @media (max-width: 650px) {
-    flex-direction: column;
-    gap: 15px;
-  }
+  flex-direction: column;
+  flex: 0 1 368px;
 }
 
 .goal__item-text {
-  width: 61.4%;
-  padding-left: 24px;
-  border-left: 5px solid #9ee708;
+  padding: 18px;
+  padding-right: 5px;
+  padding-bottom: 0;
+  font-size: 20px;
   font-weight: bold;
   color: white;
   margin-bottom: 0;
@@ -194,9 +302,8 @@
 .goal__item-note {
   padding-top: 15px;
   padding-bottom: 15px;
-  width: 33.3%;
   display: flex;
-  flex-direction: column;
+  min-height: 106px;
   align-items: center;
   justify-content: center;
   padding-left: 20px;
@@ -209,7 +316,6 @@
   background-image: linear-gradient(to right, #006b77 0%, #009067 100%);
 
   @media (max-width: 650px) {
-    width: 100%;
     font-size: 18px;
   }
 }

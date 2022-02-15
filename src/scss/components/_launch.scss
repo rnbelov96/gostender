@@ -113,32 +113,70 @@
 }
 
 .launch__split-text-box {
+  background-color: #006b77;
+  padding-left: 38px;
+  padding-top: 35px;
+  padding-right: 67px;
+  padding-bottom: 35px;
+  border-radius: 20px;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   margin-bottom: 20px;
-  gap: 15px;
+  gap: 28px;
+  overflow: hidden;
 
   @media (max-width: 650px) {
-    flex-direction: column;
+    padding: 25px;
   }
 }
 
 .launch__split-text {
   margin-bottom: 0;
+  position: relative;
 
   &:first-child {
-    @include max-width(221px);
+    padding-left: 143px;
 
     @media (max-width: 650px) {
-      width: 100%;
+      padding-left: 0;
+      padding-bottom: 123px;
+    }
+
+    &::before {
+      left: -112px;
+      top: -78px;
+      pointer-events: none;
+      position: absolute;
+      content: url('/src/img/grow-left.png');
+
+      @media (max-width: 650px) {
+        top: initial;
+        bottom: -20px;
+        left: -57px;
+      }
     }
   }
 
   &:last-child {
-    @include max-width(284px);
+    padding-right: 215px;
 
     @media (max-width: 650px) {
-      width: 100%;
+      padding-right: 0;
+      padding-bottom: 123px;
+    }
+
+    &::after {
+      right: -90px;
+      top: -79px;
+      pointer-events: none;
+      position: absolute;
+      content: url('/src/img/grow-right.png');
+
+      @media (max-width: 650px) {
+        top: initial;
+        bottom: -20px;
+        right: -57px;
+      }
     }
   }
 }
