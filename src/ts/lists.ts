@@ -68,8 +68,25 @@ const DOMAnimations = {
 
 const goalNoteBtnEl = document.querySelector('.js-goal-note-btn');
 const goalListEl = document.querySelector('.js-goal-note-list');
-
 goalNoteBtnEl?.addEventListener('click', () => {
   goalNoteBtnEl.classList.toggle('goal__note-button_opened');
   DOMAnimations.slideToggle(goalListEl);
+});
+
+const helpContentEl = document.querySelector('.js-help-content');
+helpContentEl?.addEventListener('click', e => {
+  const clickedElement = (e.target as Element) || null;
+
+  if (!clickedElement?.classList.contains('help__more-btn')) {
+    return;
+  }
+
+  const listEl = clickedElement?.previousElementSibling;
+  DOMAnimations.slideToggle(listEl);
+  clickedElement.textContent = clickedElement.classList.contains(
+    'help__more-btn_opened',
+  )
+    ? 'Нажмите, чтобы прочитать подробнее'
+    : 'Свернуть';
+  clickedElement.classList.toggle('help__more-btn_opened');
 });
