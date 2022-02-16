@@ -28,7 +28,9 @@ const closeModal = (modalEl: HTMLDivElement) => {
 
 const openModal = (modalEl: HTMLDivElement) => {
   if (window.innerWidth > document.body.clientWidth) {
-    document.body.style.paddingRight = `${window.innerWidth - document.body.clientWidth}px`;
+    document.body.style.paddingRight = `${
+      window.innerWidth - document.body.clientWidth
+    }px`;
   }
   modalEl.style.opacity = '1';
   modalEl.style.overflowY = 'auto';
@@ -44,13 +46,20 @@ const youtubeAdvModalWrapperEl = youtubeAdvModalEl.querySelector(
 ) as HTMLDivElement;
 let isYoutubeAdvModalOpened = false;
 
-const formTitleEl = formModalEl.querySelector('.js-modal-form-title') as HTMLSpanElement;
-const formBtnEl = formModalEl.querySelector('.js-modal-form-btn') as HTMLButtonElement;
+const formTitleEl = formModalEl.querySelector(
+  '.js-modal-form-title',
+) as HTMLSpanElement;
+const formBtnEl = formModalEl.querySelector(
+  '.js-modal-form-btn',
+) as HTMLButtonElement;
 
 const modalWrapperElList = document.querySelectorAll('.modal__center-wrapper');
 modalElList.forEach(modalEl => {
   modalEl.addEventListener('click', (e: Event) => {
-    if (e.target === e.currentTarget || [...modalWrapperElList].includes(e.target as Element)) {
+    if (
+      e.target === e.currentTarget ||
+      [...modalWrapperElList].includes(e.target as Element)
+    ) {
       const clickedModal = e.currentTarget as HTMLDivElement;
       if (clickedModal === youtubeAdvModalEl) {
         const iframe = clickedModal.querySelector('iframe');
@@ -120,7 +129,7 @@ youtubeAdvBtnCallEl?.addEventListener('click', () => {
         class="modal__video"
         width="1520"
         height="855"
-        src="https://www.youtube.com/embed/2OEL4P1Rz04"
+        src="https://www.youtube.com/embed/L1mrRXlSlzo"
         title="YouTube video player"
         frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

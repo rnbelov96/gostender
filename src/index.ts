@@ -6,3 +6,4 @@ import './ts/setup-forms';
 import './ts/f5leads-init';
 import './ts/f5leads';
 import './ts/lists';
+import './ts/tabs';

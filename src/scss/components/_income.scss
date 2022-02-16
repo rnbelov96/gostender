@@ -63,7 +63,7 @@
   &:first-child {
     max-width: 305px;
     .income__item-text {
-      text-align: left;
+      text-align: center;
       padding-left: 27px;
       padding-right: 27px;
       padding-top: 18px;
@@ -75,7 +75,7 @@
 
   &:nth-child(2) {
     .income__item-text {
-      text-align: left;
+      text-align: center;
       padding-left: 27px;
       padding-right: 27px;
       padding-top: 18px;
