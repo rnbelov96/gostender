@@ -5,6 +5,8 @@
   background-image: url('/src/img/bgs/consult-bg.jpg');
   padding-top: 75px;
   padding-bottom: 180px;
+  position: relative;
+  z-index: 1;
 
   @media (max-width: 1800px) {
     background-position-x: -150px;
