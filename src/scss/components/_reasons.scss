@@ -1,6 +1,9 @@
 .reasons {
   padding-top: 75px;
   padding-bottom: 80px;
+  position: relative;
+  z-index: 1;
+  background-color: white;
 
   @media (max-width: 991px) {
     padding-bottom: 50px;
