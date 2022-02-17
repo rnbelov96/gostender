@@ -57,8 +57,8 @@ const modalWrapperElList = document.querySelectorAll('.modal__center-wrapper');
 modalElList.forEach(modalEl => {
   modalEl.addEventListener('click', (e: Event) => {
     if (
-      e.target === e.currentTarget ||
-      [...modalWrapperElList].includes(e.target as Element)
+      e.target === e.currentTarget
+      || [...modalWrapperElList].includes(e.target as Element)
     ) {
       const clickedModal = e.currentTarget as HTMLDivElement;
       if (clickedModal === youtubeAdvModalEl) {
@@ -102,6 +102,16 @@ callbackBtnElList.forEach(btn => {
 
 const presentBtnElList = document.querySelectorAll('.js-present');
 presentBtnElList.forEach(btn => {
+  btn.addEventListener('click', () => {
+    openedModalList.unshift(formModalEl);
+    formTitleEl.textContent = modalFormInfoList[1].title;
+    formBtnEl.textContent = modalFormInfoList[1].button;
+    openModal(formModalEl as HTMLDivElement);
+  });
+});
+
+const moreBtnElList = document.querySelectorAll('.js-learn-more');
+moreBtnElList.forEach(btn => {
   btn.addEventListener('click', () => {
     openedModalList.unshift(formModalEl);
     formTitleEl.textContent = modalFormInfoList[1].title;

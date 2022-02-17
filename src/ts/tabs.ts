@@ -45,3 +45,26 @@ offerTabListEl?.addEventListener('click', e => {
   offerTabEl[offerCurrentTab - 1].classList.toggle('offer__tab-item_active');
   offerTextBoxElList[offerCurrentTab - 1].classList.toggle('visually-hidden');
 });
+
+let gainsCurrentTab = 1;
+const gainsTabEl = document.querySelectorAll('.gains__tab-item');
+const gainsTextBoxElList = document.querySelectorAll('.gains__text-box');
+const gainsTabListEl = document.querySelector('.gains__tab-list');
+
+gainsTabListEl?.addEventListener('click', e => {
+  const clickedEl = e.target as Element;
+  if (!(clickedEl.tagName === 'LI')) {
+    return;
+  }
+
+  const clickedElIndex = Number((clickedEl as HTMLUListElement).dataset.gainsTabIndex);
+  if (clickedElIndex === gainsCurrentTab) {
+    return;
+  }
+
+  gainsTabEl[gainsCurrentTab - 1].classList.toggle('gains__tab-item_active');
+  gainsTextBoxElList[gainsCurrentTab - 1].classList.toggle('visually-hidden');
+  gainsCurrentTab = clickedElIndex;
+  gainsTabEl[gainsCurrentTab - 1].classList.toggle('gains__tab-item_active');
+  gainsTextBoxElList[gainsCurrentTab - 1].classList.toggle('visually-hidden');
+});
