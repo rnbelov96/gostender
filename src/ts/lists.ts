@@ -90,3 +90,16 @@ helpContentEl?.addEventListener('click', e => {
     : 'Свернуть';
   clickedElement.classList.toggle('help__more-btn_opened');
 });
+
+const reasonsContentEl = document.querySelector('.reasons__mobile-list');
+reasonsContentEl?.addEventListener('click', e => {
+  const clickedElement = (e.target as Element) || null;
+
+  if (!clickedElement?.classList.contains('reasons__mobile-item')) {
+    return;
+  }
+
+  const listEl = clickedElement?.nextElementSibling;
+  DOMAnimations.slideToggle(listEl);
+  clickedElement.classList.toggle('reasons__mobile-item_active');
+});

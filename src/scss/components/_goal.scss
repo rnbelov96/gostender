@@ -1,11 +1,15 @@
 .goal {
   min-height: 1459px;
   background-image: url('/src/img/bgs/goal-bg.jpg');
-  background-position: right top;
-  background-size: cover;
+  background-position: left top;
+  background-color: #00515a;
   background-repeat: no-repeat;
   padding-top: 185px;
   padding-bottom: 75px;
+
+  @media (min-width: 1921px) {
+    background-position-x: center
+  }
 
   @media (max-width: 1700px) {
     background-position-x: -45px;
@@ -16,7 +20,6 @@
   }
 
   @media (max-width: 1300px) {
-    background-color: #00515a;
     background-image: none;
     min-height: auto;
   }

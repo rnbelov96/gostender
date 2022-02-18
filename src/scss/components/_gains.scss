@@ -76,7 +76,7 @@
     @media (max-width: 650px) {
       content: '';
       width: 650px;
-      height: 180px;
+      height: 107px;
       @include bg;
       background-image: url('/src/img/offer-bg.jpg');
       @include central-align;
