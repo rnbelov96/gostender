@@ -1,14 +1,16 @@
 .direct {
-  min-height: 1407px;
   padding-top: 85px;
-  padding-bottom: 150px;
+  padding-bottom: 490px;
   @include bg;
   background-image: url('/src/img/bgs/direct-bg.jpg');
   color: white;
 
+  @media (max-width: 1150px) {
+    padding-bottom: 50px;
+  }
+
   @media (max-width: 991px) {
     padding-top: 50px;
-    padding-bottom: 50px;
   }
 
   @media (max-width: 767px) {
@@ -42,7 +44,7 @@
   justify-content: center;
   gap: 35px;
 
-  @media (max-width: 991px) {
+  @media (max-width: 1150px) {
     margin-bottom: 30px;
   }
 }
@@ -53,6 +55,24 @@
   border: 1px solid rgba(#9ee708, 0.25);
   border-radius: 15px;
   padding-bottom: 23px;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    bottom: -6px;
+    right: 21px;
+    font-size: 100px;
+    font-weight: bold;
+    color: rgba(158, 231, 8, 0.2);
+  }
+
+  @for $i from 1 through 6 {
+    &:nth-child(#{$i}) {
+      &::after {
+        content: '#{$i}';
+      }
+    }
+  }
 
   &:nth-child(7),
   &:nth-child(8) {
@@ -67,7 +87,7 @@
 .direct__item-title {
   height: 100px;
   background-color: #ffffff;
-  padding-left: 28px;
+  padding-left: 104px;
   display: flex;
   align-items: center;
   margin-bottom: 26px;
@@ -75,6 +95,14 @@
   font-weight: bold;
   text-transform: uppercase;
   color: black;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
 
   @media (max-width: 650px) {
     margin-bottom: 20px;

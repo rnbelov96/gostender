@@ -43,11 +43,11 @@
 
   &_direct {
     position: absolute;
-    bottom: -260px;
+    bottom: -590px;
     left: 50%;
     transform: translateX(-50%);
 
-    @media (max-width: 991px) {
+    @media (max-width: 1150px) {
       position: relative;
       bottom: 0px;
       left: 0px;
